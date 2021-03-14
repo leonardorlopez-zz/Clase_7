@@ -1,0 +1,17 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Nueva Remera {% endblock %}
+
+{% block content %}
+<h1>Nueva remera</h1>
+<form method="post">
+    {% csrf_token %} <!--variable que Django agrega automaticamente al contexto
+                         de nuestra plantilla. Y que protege al formulario de ciertas
+                        vulnerabilidades-->
+    {{ form.as_p }}
+    <input type="submit" value="Guardar"> 
+
+</form>
+
+
+{% endblock %}

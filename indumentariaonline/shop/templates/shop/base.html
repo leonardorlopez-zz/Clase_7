@@ -1,0 +1,20 @@
+{% load static %} 
+<html>
+<head>
+    <title>
+        {% block title %} {% endblock %} 
+    </title>
+</head>
+<a href="{% url 'index' %}">
+    <img src="{% static 'shop/logo.png'  %}" >
+</a>
+<body>
+    
+   {% block content %}{% endblock %}  <!--generamos un bloque lo que significa que en las
+                                        plantillas que extienden o heredan de base.html
+                                         se aplicara codigo html donde se marque el bloque
+                                         --> 
+</body>
+    
+
+</html>
